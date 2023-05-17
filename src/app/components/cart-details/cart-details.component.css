@@ -1,0 +1,64 @@
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+
+.card {
+    height: 90vh;
+    margin: 60px;
+    padding: 25px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.center img {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 162px;
+    width: 250px;
+    margin: 20px 0px;
+}
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+h4,
+h6 {
+    font-weight: 400;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.center .btn {
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+.checkout-btn{
+    font-size: 14px ;
+  margin-left: 210%;
+    font-weight: 200;
+    padding: 8px 72px;
+    border-radius: 3px ;
+}

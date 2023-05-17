@@ -1,0 +1,107 @@
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.product-box img {
+    width: 170px;
+}
+
+.items select {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    outline: 0;
+    margin-left: 5px;
+}
+.product-box{
+    margin-bottom:60px
+}
+.price{
+    margin:15px 0 0;
+    font-weight:800;
+    color:#0da8e4
+}
+.product-box h1{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    font-weight:600;
+    padding-top:12px;
+    margin-bottom:7px
+}
+.product-box h2{
+    font-size:15px;
+    padding-bottom:0;
+    font-weight:500;
+    color:#585858
+}
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.card-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: rgb(255, 255, 255);
+    background-clip: border-box;
+    border: 1.2px solid rgba(24, 143, 143, 0.2);
+    border-radius: .25rem;
+}
+
+.item img {
+    width: 48px;
+}
+
+.item {
+    
+    margin: 0px 50px;
+    text-align: center;
+    cursor: pointer;
+
+}
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.item a:hover {
+    color: rgb(218, 24, 24);
+}
+
+.card {
+    padding: 25px;
+    margin: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 1.25rem;
+   }
+
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    cursor: zoom-in;
+    transition: 0.5s all ease-in-out;
+}
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.4);
+}
+
+
+
+.btn:hover{
+    background-color: red;
+} 
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/

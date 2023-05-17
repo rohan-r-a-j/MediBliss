@@ -1,0 +1,62 @@
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+body{
+    background-color: #25274d;
+    
+}
+.contact{
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.col-md-3{
+    background-image: linear-gradient(to right, #0077b6, #00b4d8, #90e0ef,#caf0f8);
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.contact-info{
+    margin-top:20%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:600;
+}
+.contact-form button{
+    background: black;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+.overlay{
+    background-color: white;
+}
+h6 {
+    font-size: 18px;
+    background: -webkit-linear-gradient(rgb(173, 127, 127), #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/

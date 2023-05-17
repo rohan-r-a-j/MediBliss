@@ -1,0 +1,32 @@
+
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.card{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.brand{
+    width: 80px;
+    height: 90px;
+  
+}
+.img-fluid{
+    width: 8000px;
+    height: 600px;
+}
+.success{
+    background-image: linear-gradient(to right,#03045e, #0077b6, #00b4d8, #03045e);
+}
+[data-emoji] {
+    font-style: normal;
+    font-weight: normal;
+  }
+  [data-emoji]:before {
+    content: attr(data-emoji);
+    margin-right: .125em;
+  }
+  .tc{
+    text-shadow: rgb(52, 182, 237) 1px 0 10px;
+  }

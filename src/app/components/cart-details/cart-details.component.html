@@ -1,0 +1,99 @@
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+<div class="">
+    <div class="section-content section-content-p10">
+        <div class="container-fluid">
+
+            <div *ngIf="cartItems.length > 0">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="10%">Medicine Image</th>
+                        <th width="30%">Medicine Detail</th>
+                        <th width="30%"></th>
+                        
+                    </tr>
+
+                    <tr *ngFor="let tempCartItem of cartItems">
+                        <td>
+                            <img src="{{ tempCartItem.imageUrl }}" class="img-responsive" width="150px" />
+                        </td>
+                        <td>
+                            <p>{{ tempCartItem.name }}</p>
+                            <p>{{ tempCartItem.unitPrice | currency: '₹ ' }}</p>
+                        </td>
+                        <td>
+                            <div class="items">
+                                <label>Quantity:</label> 
+                                <div class="col">
+                                <div class="row-no-gutters">
+                                    <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                               <div class="col ml-4 mr-2">
+                                {{tempCartItem.quantity}}
+                               </div>
+                               <div class="row-no-gutters">
+                               <div class="col">
+                              
+                                    <!---(click)="decrementQuantity(tempCartItem)"--><button  class="btn btn-primary btn-sm" >
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                </div>
+                                <div class="col-8"></div>
+                                
+                            </div>
+</div>
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                            <p class="mt-2">Subtotal: {{ tempCartItem.quantity * tempCartItem.unitPrice | currency: '₹ ' }}</p>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"></td>
+                        <td style="font-weight: bold">
+                            <p>Total Quantity: {{ totalQuantity }}</p>
+                            <p>Shipping: <span style="color: red;"> FREE for limited time</span></p>
+                            <p>Total Price: {{ totalPrice | currency: '₹ ' }}</p>
+                            <div class="">
+                                
+                                <a class="btn btn-success" routerLink="/checkout" routerLinkActive="active">Proceed to Checkout</a>
+                            
+                                &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                                <a class="btn btn-primary" routerLink="/products" routerLinkActive="active">Continue Shopping</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+
+            <!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+            <!-- if cart is empty then display a message -->
+            <div *ngIf="cartItems.length == 0">
+                <div class="container">
+                    <div class="card">
+                        <h5 class="card-title ">My Cart</h5>
+                    </div>
+                    <div class="center">
+                        <img src="https://media.istockphoto.com/photos/capsules-in-the-shopping-cart-isolated-on-white-background-picture-id155438480?k=20&m=155438480&s=612x612&w=0&h=No7R2wdMMqFqiUwlNVo4Wy7o7-pS9chlAzaBjFOI5xE="
+                            alt="">
+                        <h4><strong>Oops! Nothing in the cart</strong></h4>
+                        <h6><b>Add Medicines to it now</b></h6>
+                        <button routerLink="/products" class="btn btn-warning"><b>Buy Medicines</b></button>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->

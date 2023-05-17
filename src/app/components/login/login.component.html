@@ -1,0 +1,129 @@
+
+<!--
+   Code by Team A of Java3- 
+  Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+ -->
+<section class="" style="background-color: #fff;">
+   
+      <div class="row d-flex justify-content-center align-items-center h-1000">
+        <div class="col col-xl-10">
+          <div class="card" style="">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <div class="img">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.6435-9/70510222_106565817408368_1773558709968961536_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=LldD0dNQ2QUAX-lj8yS&_nc_ht=scontent.fpat1-2.fna&oh=00_AT9dQQ-WRQoG-GlqQdK5epNg7aHvagv_mAcPCEr0gWN_vA&oe=632402B7"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+  
+                  <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+  <!--
+   Code by Team A of Java3- 
+  Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+ -->
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <img class="brand" src="data:image/jpeg;base64,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">
+                      <span class="h1 fw-bold mb-0">MediBliss</span>
+                    </div>
+  <div class="tc">
+                    <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"><b>Sign into your account</b></h3>
+                  </div>
+                    <div class="form-outline mb-4">
+                      <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      [(ngModel)]="form.username"
+                      required
+                      #username="ngModel"
+                    />
+                     <h3> <label class="form-label" for="username">Username</label></h3>
+                      <div
+                      class="alert alert-danger"
+                      role="alert"
+                      *ngIf="username.errors && f.submitted"
+                    >
+                      Username is required!
+                    </div>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      autocomplete="on"
+                      [(ngModel)]="form.password"
+                      required
+                      minlength="6"
+                      #password="ngModel"
+                    />
+                  <h3>  <label class="form-label" for="password">Password</label></h3>
+                      <div
+                      class="alert alert-danger"
+                      role="alert"
+                      *ngIf="password.errors && f.submitted"
+                    >
+                      <div *ngIf="password.errors.required">Password is required</div>
+                      <div *ngIf="password.errors.minlength">
+                        Password must be at least 6 characters
+                      </div>
+                    </div>
+                    </div>
+  
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-warning btn-lg btn-block" >Login</button>
+                    </div>
+                  <!--
+   Code by Team A of Java3- 
+  Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+ -->
+                    <div class="form-group">
+                      <div
+                        class="alert alert-danger"
+                        role="alert"
+                        *ngIf="f.submitted && isLoginFailed"
+                      >
+                        Not Able To Login Due to {{ errorMessage }}
+                      </div>
+                    </div>
+                    <a class=" text-muted" href=""routerLink="/forgotpass" routerLinkActive="active"><span style="color:#470fe4;">Forgot password?</span> </a>
+                    <h4 class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a routerLink="/register" routerLinkActive="active"
+                        style="color: #470fe4;">Register here</a></h4>
+                    <a  routerLink="/terms" routerLinkActive="active" class=" text-muted" ><span style="color:#470fe4;">Terms & Services</span></a><br>
+                  </form>
+
+                  <div class="success">
+                  <div class="alert alert-success" *ngIf="isLoggedIn">
+                    <div class="text-white">
+                      <h1> <span style="color:black">WELCOME BACK! <i data-emoji="😍"></i></span></h1>
+                      <br>
+                  <h1> <span style="color:black">You are successfully logged in and now will be able to purchase products.</span></h1>
+                <br>
+            <h4> <span style="color:black"> <a routerLink="/products"> Click Here </a> to redirect you to home page to continue shopping. </span></h4>
+                </div>
+               <!---- <button routerLink="/products" class="btn btn-warning btn-lg btn-block" >Go To Purchase</button>-->
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+  </section>
+  
+  <!--
+   Code by Team A of Java3- 
+  Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+ -->

@@ -1,0 +1,57 @@
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+  
+.form-control {
+  border-radius: 30px;
+  width: 500px;
+  margin-left: 10px;
+  cursor: text;
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 10;
+  right:40%;
+  top: 20px;
+  color: rgb(233, 14, 65);
+}
+
+.btn btn-outline-info  {
+  padding: 90px 180px;
+  font-size: 20px;
+  border-radius: 80px;
+  width:95%;  
+}
+.active{
+  color: rgb(122, 10, 10);
+}
+.btn .bx {
+  vertical-align: inherit;
+  margin-top: -3px;
+  font-size: 1.15rem;
+}
+
+.navbar-brand{
+  width: 90px;
+  height: 60px;
+
+ /* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+}
+.btn btn-primary{
+  margin-left: 2px;
+}
+#grad {
+ background-image: linear-gradient(to right,#03045e, #0077b6, #00b4d8, #90e0ef,#caf0f8);
+ background-color: #E2A76F;
+}
+.app-cart{
+  right: 20%;
+}
+.title{
+  margin-right: 30px;
+}

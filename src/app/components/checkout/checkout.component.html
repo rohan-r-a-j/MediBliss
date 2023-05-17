@@ -1,0 +1,557 @@
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+<div class="main-content ">
+    <div class="">
+        <div class="container-fluid">
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+
+                <!--customer form group-->
+                <div formGroupName="customer" class="form-area">
+                    <h3><b>Personal Details</b></h3>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >First Name: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="firstName" type="text">
+
+                                <div *ngIf="firstName?.invalid && (firstName?.dirty || firstName?.touched)"
+                                    class="alert alert-danger mt-0">
+
+                                    <div *ngIf="firstName?.errors?.required">
+                                        First Name is required
+                                    </div>
+
+                                    <div *ngIf="firstName?.errors?.minLength">
+                                        First Name must be at least 2 characters long
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Last Name:</span> </b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="lastName" type="text">
+
+                                <div *ngIf="lastName?.invalid && (lastName?.dirty || lastName?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="lastName?.errors?.required">
+                                        Last Name is required
+                                    </div>
+
+                                    <div *ngIf="lastName?.errors?.minLength">
+                                        Last Name must be at least 2 characters long
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >E-mail Address:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="email" type="text">
+
+                                <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="email?.errors?.required">
+                                        Email is required
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                <!---Shipping address-->
+                <div formGroupName="shippingAddress" class="form-area">
+                    <h3><b>Shipping Address</b></h3>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Street:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="street" type="text">
+
+                                <div *ngIf="shippingAddressStreet?.invalid && (shippingAddressStreet?.dirty || shippingAddressStreet?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="shippingAddressStreet?.errors?.required">
+                                        Street is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >City: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="city" type="text">
+
+                                <div *ngIf="shippingAddressCity?.invalid && (shippingAddressCity?.dirty || shippingAddressCity?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="shippingAddressCity?.errors?.required">
+                                        City is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >State:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="state">
+                                    <option>Delhi</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Rajasthan</option>
+                                    <option>Maharashtra</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Andhra Pradesh</option>                                  
+                                    <option>Karnataka</option>
+                                    <option>Jammu & Kashmir</option>
+                                </select>
+
+                                <div *ngIf="shippingAddressState?.invalid && (shippingAddressState?.dirty || shippingAddressState?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="shippingAddressState?.errors?.required">
+                                        State is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Pincode: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="pincode" type="text">
+
+                                <div *ngIf="shippingAddressPinCode?.invalid && (shippingAddressPinCode?.dirty || shippingAddressPinCode?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="shippingAddressPinCode?.errors?.required">
+                                        Pin Code is required
+                                    </div>
+                                    <div *ngIf="shippingAddressPinCode?.errors?.minLength">
+                                        Pin Code must be at least 6 characters long
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Country: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="country">
+                                    <option>India</option>
+                                    <option>Sri Lanka</option>
+                                    <option>China</option>
+                                    <option>Bhutan</option>
+                                    <option>Nepal</option>
+                                    <option>Russia</option>
+                                    <option>Ukraine</option>
+                                </select>
+
+                                <div *ngIf="shippingAddressCountry?.invalid && (shippingAddressCountry?.dirty || shippingAddressCountry?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="shippingAddressCountry?.errors?.required">
+                                        Country is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+         
+<!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    
+                </div>
+
+                <!--Billing adddress-->
+
+                <div formGroupName="billingAddress" class="form-area">
+                    <h3><b>Billing Address</b></h3>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Street: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="street" type="text">
+
+                                <div *ngIf="billingAddressStreet?.invalid && (billingAddressStreet?.dirty || billingAddressStreet?.touched)"
+                                    class="alert alert-danger mt-1">
+                                    <div *ngIf="billingAddressStreet?.errors?.required">
+                                        Street is required
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >City: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="city" type="text">
+
+                                <div *ngIf="billingAddressCity?.invalid && (billingAddressCity?.dirty || billingAddressCity?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="billingAddressCity?.errors?.required">
+                                        City is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >State: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="state">
+                                    <option>Delhi</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Rajasthan</option>
+                                    <option>Maharashtra</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Andhra Pradesh</option>                                  
+                                    <option>Karnataka</option>
+                                    <option>Jammu & Kashmir</option>
+                                </select>
+
+                                <div *ngIf="billingAddressState?.invalid && (billingAddressState?.dirty || billingAddressState?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="billingAddressState?.errors?.required">
+                                        State is required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Pincode:</span> </b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="pincode" type="text">
+
+                                <div *ngIf="billingAddressPinCode?.invalid && (billingAddressPinCode?.dirty || billingAddressPinCode?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="billingAddressPinCode?.errors?.required">
+                                        Pin Code is required
+                                    </div>
+                                    <div *ngIf="billingAddressPinCode?.errors?.minLength">
+                                        Pin Code must be at least 6 characters long
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Country: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="country">
+                                    <option>India</option>
+                                    <option>Sri Lanka</option>
+                                    <option>China</option>
+                                    <option>Bhutan</option>
+                                    <option>Nepal</option>
+                                    <option>Russia</option>
+                                    <option>Ukraine</option>
+                                </select>
+
+                                <div *ngIf="billingAddressCountry?.invalid && (billingAddressCountry?.dirty || billingAddressCountry?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="billingAddressCountry?.errors?.required">
+                                        Country is required
+                                    </div>
+                                </div>
+
+                                <!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Final Div-->
+                </div>
+
+                <!--Card Details-->
+
+                <div formGroupName="creditCard" class="form-area">
+                    <h3><b>Card Details</b></h3>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Card Type:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="cardType">
+                                    <option>Visa</option>
+                                    <option>MasterCard</option>
+                                </select>
+
+                                <div *ngIf="creditCardType?.invalid && (creditCardType?.dirty || creditCardType?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardType?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Name On Card:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="nameOnCard" type="text">
+
+                                <div *ngIf="creditCardNameOnCard?.invalid && (creditCardNameOnCard?.dirty || creditCardNameOnCard?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardNameOnCard?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+                                    <div *ngIf="creditCardNameOnCard?.errors?.minLength">
+                                        Name must be of 5 characters
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+<!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Card Number: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="cardNumber" type="text">
+
+                                <div *ngIf="creditCardNumber?.invalid && (creditCardNumber?.dirty || creditCardNumber?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardNumber?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+                                    <div *ngIf="creditCardNumber?.errors?.pattern">
+                                        Card Number must be 16 digits long
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >CVV: </span></b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="securityCode" type="text">
+
+                                <div *ngIf="creditCardSecurityCode?.invalid && (creditCardSecurityCode?.dirty || creditCardSecurityCode?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardSecurityCode?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+                                    <div *ngIf="creditCardNumber?.errors?.pattern">
+                                        CVV must be 3 digits long
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+<!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Expiry Month:</span></b> </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="expirationMonth">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+
+                                <div *ngIf="creditCardExpiryMonth?.invalid && (creditCardExpiryMonth?.dirty || creditCardExpiryMonth?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardExpiryMonth?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+<!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label><b><span style="color: black;" >Expiry Year:</span> </b></label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <select formControlName="expirationYear">
+                                    <option>2020</option>
+                                    <option>2021</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                    <option>2031</option>
+
+                                </select>
+
+                                <div *ngIf="creditCardExpiryYear?.invalid && (creditCardExpiryYear?.dirty || creditCardExpiryYear?.touched)"
+                                    class="alert alert-danger mt-1">
+
+                                    <div *ngIf="creditCardExpiryYear?.errors?.required">
+                                        You must not leave this field empty
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+
+                </div>
+
+                <!--Order details review-->
+                <div class="form-area">
+                    <h3>Review your order</h3>
+
+                    <h4>Total Quantity: {{ totalQuantity}}</h4>
+                    <h4>Shipping: Free</h4>
+                    <h4>Total Price: {{ totalPrice | currency: '₹ '}}</h4>
+                </div>
+
+<!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->
+                <!--submit buton-->
+
+                <div class="text-center">
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Place Order</button>   &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    <button routerLink="/cart-details" routerLinkActive="true" class="btn btn-dark btn-lg btn-block">Back To Cart</button>
+               
+                </div>
+
+            </form>
+            
+        </div>
+    </div>
+</div>
+<!-- Code by Team A of Java3- 
+                     Rohan, Vidisha, Yash, Kunal, Shivam, Anmol -->

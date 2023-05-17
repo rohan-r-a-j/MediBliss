@@ -1,0 +1,20 @@
+/* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
+.watermark{
+    opacity: 2.9;
+    color:black;
+    background-image: linear-gradient(to right, #0077b6, #00b4d8, #90e0ef,#caf0f8);
+    width:550px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    bottom:1px;
+    right:5px;
+    }
+    /* 
+Code by Team A of Java3- 
+Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
+*/
