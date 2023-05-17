@@ -1,7 +1,4 @@
-/* 
-Code by Team A of Java3- 
-Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
-*/
+
 .product-box img {
     width: 170px;
 }
@@ -37,10 +34,7 @@ Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
     font-weight:500;
     color:#585858
 }
-/* 
-Code by Team A of Java3- 
-Rohan, Vidisha, Yash, Kunal, Shivam, Anmol
-*/
+
 .card-top {
     position: relative;
     display: flex;
